@@ -84,34 +84,67 @@ saoThienLuong = Sao(12, "Thiên lương", "M", 1, "Nam đẩu tinh", -1, 0)
 saoThatSat = Sao(13, "Thất sát", "K", 1, "Nam đẩu tinh", 1, 0)
 saoPhaQuan = Sao(14, "Phá quân", "T", 1, "Bắc đẩu tinh", -1, 0)
 
+# Lục sát
+#    Địa không - Địa kiếp
+saoDiaKhong = Sao(53, "Địa không", "H", 11)
+saoDiaKiep = Sao(54, "Địa kiếp", "H", 11)
+#    Kình dương đà la
+saoDaLa = Sao(51, "Đà la", "K", 11)
+saoKinhDuong = Sao(52, "Kình dương", "K", 11)
+#    Hỏa tinh - Linh tinh
+saoLinhTinh = Sao(55, "Linh tinh", "H", 11)
+saoHoaTinh = Sao(56, "Hỏa tinh", "H", 11)
+
+
 # Vòng Địa chi - Thái tuế
 saoThaiTue = Sao(15, "Thái tuế", "H", 15, "", 0)
-saoThieuDuong = Sao(16, "Thiếu dương", "H", 5)
+saoDieuKhach = Sao(25, "Điếu khách", "H", 12)
+saoBachHo = Sao(23, "Bạch hổ", "K", 12)
 saoTangMon = Sao(17, "Tang môn", "M", 12)
+saoTuePha = Sao(21, "Tuế phá", "H", 12)
+
+
+saoHoaCai = Sao(105, "Hoa cái", "K", 6)
+saoCoThan = Sao(96, "Cô thần", "O", 13)
+saoQuaTu = Sao(97, "Quả tú", "O", 13)
+saoThienMa = Sao(98, "Thiên mã", "H", 3)
+saoPhaToai = Sao(99, "Phá toái", "H", 12)
+saoThienKhong = Sao(108, "Thiên không", "T", 11)
+saoThienQuan = Sao(100, "Thiên quan", "H", 5)
+saoThienPhuc = Sao(101, "Thiên phúc", "H", 5)
+saoLuuHa = Sao(102, "Lưu hà", "T", 12)
+saoThienTru = Sao(103, "Thiên trù", "O", 5)
+saoKiepSat = Sao(104, "Kiếp sát", "H", 11)
+saoVanTinh = Sao(106, "Văn tinh", "H", 6)
+saoDauQuan = Sao(107, "Đẩu quân", "H", 5)
+
+
+
 saoThieuAm = Sao(18, "Thiếu âm", "T", 5)
+saoThieuDuong = Sao(16, "Thiếu dương", "H", 5)
+saoLongDuc = Sao(22, "Long đức", "T", 5)
+saoPhucDuc = Sao(24, "Phúc đức", "O", 5)
+saoTrucPhu = Sao(26, "Trực phù", "K", 16)
 saoQuanPhu3 = Sao(19, "Quan phù", "H", 12)
 saoTuPhu = Sao(20, "Tử phù", "K", 12)
-saoTuePha = Sao(21, "Tuế phá", "H", 12)
-saoLongDuc = Sao(22, "Long đức", "T", 5)
-saoBachHo = Sao(23, "Bạch hổ", "K", 12)
-saoPhucDuc = Sao(24, "Phúc đức", "O", 5)
-saoDieuKhach = Sao(25, "Điếu khách", "H", 12)
-saoTrucPhu = Sao(26, "Trực phù", "K", 16)
 
 #  Vòng Thiên can - Lộc tồn
 saoLocTon = Sao(27, "Lộc tồn", "O", 3, "Bắc đẩu tinh")
 saoBacSy = Sao(109, "Bác sỹ", "T", 5, )
 saoLucSi = Sao(28, "Lực sĩ", "H", 2)
 saoThanhLong = Sao(29, "Thanh long", "T", 5)
+
+saoDaiHao = Sao(36, "Đại hao", "H", 12)
 saoTieuHao = Sao(30, "Tiểu hao", "H", 12)
-saoTuongQuan = Sao(31, "Tướng quân", "M", 4)
+saoPhucBinh = Sao(37, "Phục binh", "H", 13)
+
+saoQuanPhu2 = Sao(38, "Quan phù", "H", 12)
+saoTuongQuan = Sao(31, "Tướng quân", "M", 12)
 saoTauThu = Sao(32, "Tấu thư", "K", 3)
-saoPhiLiem = Sao(33, "Phi liêm", "H", 2)
+saoPhiLiem = Sao(33, "Phi liêm", "H", 12)
 saoHyThan = Sao(34, "Hỷ thần", "H", 5)
 saoBenhPhu = Sao(35, "Bệnh phù", "O", 12)
-saoDaiHao = Sao(36, "Đại hao", "H", 12)
-saoPhucBinh = Sao(37, "Phục binh", "H", 13)
-saoQuanPhu2 = Sao(38, "Quan phù", "H", 12)
+
 
 # Vòng Tràng sinh
 saoTrangSinh = Sao(39, "Tràng sinh", "T", 5, vongTrangSinh=1)
@@ -127,18 +160,6 @@ saoTuyet = Sao(48, "Tuyệt", "O", 12, vongTrangSinh=1)
 saoThai = Sao(49, "Thai", "O", 14, vongTrangSinh=1)
 saoDuong = Sao(50, "Dưỡng", "M", 2, vongTrangSinh=1)
 
-# Lục sát
-#    Kình dương đà la
-saoDaLa = Sao(51, "Đà la", "K", 11)
-saoKinhDuong = Sao(52, "Kình dương", "K", 11)
-
-#    Địa không - Địa kiếp
-saoDiaKhong = Sao(53, "Địa không", "H", 11)
-saoDiaKiep = Sao(54, "Địa kiếp", "H", 11)
-
-#    Hỏa tinh - Linh tinh
-saoLinhTinh = Sao(55, "Linh tinh", "H", 11)
-saoHoaTinh = Sao(56, "Hỏa tinh", "H", 11)
 
 # Sao Âm Dương
 #    Văn xương - Văn khúc
@@ -168,10 +189,10 @@ saoThienQuy = Sao(68, "Thiên quý", "O", 3)
 # Sao đôi khác
 saoThienKhoc = Sao(69, "Thiên khốc", "T", 12)
 saoThienHu = Sao(70, "Thiên hư", "T", 12)
-saoThienDuc = Sao(71, "Thiên đức", "H", 5)
+saoThienDuc = Sao(71, "Thiên đức", "O", 5)
 saoNguyetDuc = Sao(72, "Nguyệt đức", "H", 5)
 saoThienHinh = Sao(73, "Thiên hình", "H", 15)
-saoThienRieu = Sao(74, "Thiên riêu", "T", 13)
+saoThienDieu = Sao(74, "Thiên diêu", "T", 13)
 saoThienY = Sao(75, "Thiên y", "T", 5)
 saoQuocAn = Sao(76, "Quốc ấn", "O", 6)
 saoDuongPhu = Sao(77, "Đường phù", "M", 4)
@@ -193,16 +214,3 @@ saoHoaKhoa = Sao(92, "Hóa khoa", "T", 5)
 saoHoaQuyen = Sao(93, "Hóa quyền", "T", 4)
 saoHoaLoc = Sao(94, "Hóa lộc", "M", 3)
 saoHoaKy = Sao(95, "Hóa kỵ", "T", 13)
-saoCoThan = Sao(96, "Cô thần", "O", 13)
-saoQuaTu = Sao(97, "Quả tú", "O", 13)
-saoThienMa = Sao(98, "Thiên mã", "H", 3)
-saoPhaToai = Sao(99, "Phá toái", "H", 12)
-saoThienQuan = Sao(100, "Thiên quan", "H", 5)
-saoThienPhuc = Sao(101, "Thiên phúc", "H", 5)
-saoLuuHa = Sao(102, "Lưu hà", "T", 12)
-saoThienTru = Sao(103, "Thiên trù", "O", 5)
-saoKiepSat = Sao(104, "Kiếp sát", "H", 11)
-saoHoaCai = Sao(105, "Hoa cái", "K", 14)
-saoVanTinh = Sao(106, "Văn tinh", "H", 6)
-saoDauQuan = Sao(107, "Đẩu quân", "H", 5)
-saoThienKhong = Sao(108, "Thiên không", "T", 11)

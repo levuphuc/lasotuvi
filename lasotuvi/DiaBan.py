@@ -6,6 +6,23 @@
 from lasotuvi.AmDuong import diaChi, dichCung, khoangCachCung
 
 
+def tinh_dia_van_theo_cung(cung_chu: str) -> str:
+    mapping = {
+        "Mệnh": "ĐV.ĐIỀN",
+        "Phụ mẫu": "ĐV.QUAN",
+        "Phúc đức": "ĐV.PHỐI",
+        "Điền trạch": "ĐV.DI",
+        "Quan lộc": "ĐV.TẬT",
+        "Nô bộc": "ĐV.TÀI",
+        "Thiên di": "ĐV.TỬ",
+        "Tật ách": "ĐV.PHỤ",
+        "Tài bạch": "ĐV.HUYNH",
+        "Tử tức": "ĐV.MỆNH",
+        "Phu thê": "ĐV.PHÚC",
+        "Huynh đệ": "ĐV.NÔ"
+    }
+    return mapping.get(cung_chu.strip().capitalize(), "Không rõ")
+
 class cungDiaBan(object):
     """docstring for cungDiaBan"""
     def __init__(self, cungID):
@@ -14,10 +31,22 @@ class cungDiaBan(object):
                     "Hỏa", "Thổ", "Kim", "Kim", "Thổ", "Thủy"]
         self.cungSo = cungID
         self.hanhCung = hanhCung[cungID]
+        self.cssHanh = self.hanh_to_css(self.hanhCung)
         self.cungSao = []
         self.cungAmDuong = -1 if (self.cungSo % 2 == 0) else 1
         self.cungTen = diaChi[self.cungSo]['tenChi']
         self.cungThan = False
+        self.diaVan = ""  # mặc định rỗng, vì chưa có cungChu
+
+    def hanh_to_css(self, hanh):
+        mapping = {
+            "Hỏa": "hanhHoa",
+            "Thổ": "hanhTho",
+            "Mộc": "hanhMoc",
+            "Thủy": "hanhThuy",
+            "Kim": "hanhKim"
+        }
+        return mapping.get(hanh, "")
 
     def themSao(self, sao):
         dacTinhSao(self.cungSo, sao)
@@ -26,6 +55,7 @@ class cungDiaBan(object):
 
     def cungChu(self, tenCungChu):
         self.cungChu = tenCungChu
+        self.diaVan = tinh_dia_van_theo_cung(tenCungChu)  # tính sau khi có tên cung
         return self
 
     def daiHan(self, daiHan):
@@ -184,6 +214,8 @@ class diaBan(object):
             self.thapNhiCung[cungSo].themSao(sao)
         return self
 
+
+
     def nhapTuan(self, *args):
         for cung in args:
             self.thapNhiCung[cung].anTuan()
@@ -193,6 +225,7 @@ class diaBan(object):
         for cung in args:
             self.thapNhiCung[cung].anTriet()
         return self
+
 
 
 def dacTinhSao(viTriDiaBan, sao):
@@ -208,8 +241,9 @@ def dacTinhSao(viTriDiaBan, sao):
             "H"],
         5: ["Thái dương", "H", "Đ", "V", "V", "V", "M", "M", "Đ", "H", "H",
             "H", "H"],
-        6: ["Thiên cơ", "Đ", "Đ", "H", "M", "M", "V", "Đ", "Đ", "V", "M", "M",
-            "H"],
+        6: ["Thiên cơ", "Đ", "Đ", "H", "M", "M", "V", "Đ", "Đ", "V", "M", "M", "H"],
+
+        7: ["Thiên phủ", "M", "B", "M", "B", "V", "Đ", "M", "Đ", "M", "B", "V", "Đ"],
         8: ["Thái âm", "V", "Đ", "H", "H", "H", "H", "H", "Đ", "V", "M",
             "M", "M"],
         9: ["Tham lang", "H", "M", "Đ", "H", "V", "H", "H", "M", "Đ", "H",
@@ -252,9 +286,9 @@ def dacTinhSao(viTriDiaBan, sao):
              None, None],
         98: ["Thiên mã", None, None, "Đ", None, None, "Đ", None, None, None,
              None, None, None],
-        73: ["Thiên Hình", None, None, "Đ", "Đ", None, None, None, None, "Đ",
+        73: ["Thiên Hình", "H", "H", "Đ", "Đ", "H", "H", "H", "H", "Đ",
              "Đ", None, None],
-        74: ["Thiên riêu", None, None, "Đ", "Đ", None, None, None, None, None,
+        74: ["Thiên diêu", None, None, "Đ", "Đ", None, None, None, None, None,
              "Đ", "Đ", None],
 
     }

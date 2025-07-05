@@ -25,7 +25,7 @@ from lasotuvi.Sao import (saoAnQuang, saoBachHo, saoBacSy, saoBatToa, saoBenh,
                  saoThienHu, saoThienHy, saoThienKhoc, saoThienKhoi,
                  saoThienKhong, saoThienLa, saoThienLuong, saoThienMa,
                  saoThienPhu, saoThienPhuc, saoThienQuan, saoThienQuy,
-                 saoThienRieu, saoThienSu, saoThienTai, saoThienTho,
+                 saoThienDieu, saoThienSu, saoThienTai, saoThienTho,
                  saoThienThuong, saoThienTru, saoThienTuong, saoThienViet,
                  saoThienY, saoThieuAm, saoThieuDuong, saoTieuHao,
                  saoTrangSinh, saoTrucPhu, saoTu, saoTuePha, saoTuongQuan,
@@ -326,8 +326,8 @@ def lapDiaBan(diaBan, nn, tt, nnnn, gioSinh, gioiTinh, duongLich, timeZone):
     viTriThienHinh = dichCung(10, tt - 1)
     diaBan.nhapSao(viTriThienHinh, saoThienHinh)
 
-    viTriThienRieu = dichCung(viTriThienHinh, 4)
-    diaBan.nhapSao(viTriThienRieu, saoThienRieu, saoThienY)
+    viTriThienDieu = dichCung(viTriThienHinh, 4)
+    diaBan.nhapSao(viTriThienDieu, saoThienDieu, saoThienY)
 
     viTriCoThan = timCoThan(chiNam)
     diaBan.nhapSao(viTriCoThan, saoCoThan)
@@ -357,6 +357,7 @@ def lapDiaBan(diaBan, nn, tt, nnnn, gioSinh, gioiTinh, duongLich, timeZone):
     #    Liệu phương cách nào đúng?
     viTriThienGiai = dichCung(9, (2 * tt) - 2)
     diaBan.nhapSao(viTriThienGiai, saoThienGiai)
+
 
     viTriDiaGiai = dichCung(viTriTaPhu, 3)
     diaBan.nhapSao(viTriDiaGiai, saoDiaGiai)
