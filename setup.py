@@ -19,6 +19,5 @@ setup(name='lasotuvi',
           "py==1.10.0",
           "pytest==3.5.0",
           "six==1.11.0",
-          "typed-ast==1.1.0"
       ],
       zip_safe=False)
