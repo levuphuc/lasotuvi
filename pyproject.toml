@@ -1,0 +1,49 @@
+[build-system]
+requires = ["setuptools>=61.0", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "lasotuvi"
+version = "0.1.2"
+description = "Chương trình an sao tử vi mã nguồn mở"
+readme = "README.md"
+license = {text = "MIT"}
+authors = [
+    {name = "levuphuc", email = "levuphuc@gmail.com"}
+]
+requires-python = ">=3.9"
+classifiers = [
+    "Development Status :: 4 - Beta",
+    "Intended Audience :: Developers",
+    "License :: OSI Approved :: MIT License",
+    "Programming Language :: Python :: 3",
+    "Programming Language :: Python :: 3.9",
+    "Programming Language :: Python :: 3.10",
+    "Programming Language :: Python :: 3.11",
+    "Programming Language :: Python :: 3.12",
+    "Programming Language :: Python :: 3.13",
+]
+dependencies = [
+    "attrs>=23.1.0",
+    "ephem>=4.1.4; sys_platform == 'linux'",
+    "more-itertools>=10.1.0",
+    "mypy>=1.7.0",
+    "pluggy>=1.3.0",
+    "py>=1.11.0",
+    "pytest>=7.4.0",
+    "six>=1.16.0",
+]
+
+[project.urls]
+Homepage = "https://github.com/levuphuc/lasotuvi"
+Repository = "https://github.com/levuphuc/lasotuvi"
+
+[tool.pytest.ini_options]
+addopts = "--verbose"
+testpaths = ["tests"]
+
+[tool.mypy]
+python_version = "3.9"
+warn_return_any = true
+warn_unused_configs = true
+disallow_untyped_defs = true
